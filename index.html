@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Books Lover | Ebookstore</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?
+      family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+      /* Animations for Featured Categories */
+.animated-row {
+  display: flex;
+  justify-content: space-between;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeInUp 1s ease forwards;
+  animation-delay: 0.5s;
+}
+
+.animated-category {
+  transform: scale(0.8);
+  transition: transform 0.3s ease;
+}
+
+.animated-category:hover {
+  transform: scale(1);
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+    </style>
+  </head>
+
+  <body>
+    <!------------------ Header ------------------>
+    <div class="header">
+      <div class="container">
+        <div class="navbar">
+          <div>
+            <h1 class="logo">BOOKMART</h1>
+          </div>
+          <!----------  Nav Bar ------------------>
+          <nav>
+            <ul id="MenuItems">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="AboutUs.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="account.html">Log In</a></li>
+            </ul>
+          </nav>
+          
+          <img src="images/menu.png" class="menu-icon" onclick="menutoggle()" />
+        </div>
+        <div class="row">
+          <div class="col-2">
+            <h1>
+              Read, Understand & Enjoy!<br />
+            </h1>
+            <p>
+              Get to explore our vast collection of ebooks, from fun classics to the bestsellers.<br />
+              Sign up below to kickstart your reading journey!
+            </p>
+            <a href="account.html" class="btn">SIGN UP &#x27F6;</a>
+          </div>
+          <div class="col-2">
+            <img src="images/header.png" alt="Header Pic" />
+          </div>
+        </div>
+      </div>
+    </div>
+   <!----------------featured categories -------------------->
+<div class="categories">
+  <div class="small-container">
+    <div class="row animated-row">
+      <div class="col-3 animated-category">
+        <img src="images/Captain Fantasy Story.webp" alt="Book 1" />
+      </div>
+      <div class="col-3 animated-category">
+        <img src="images/The Clever Tortoise.webp" alt="Book 2" />
+      </div>
+      <div class="col-3 animated-category">
+        <img src="images/Unni Wish.webp" alt="Book 3" />
+      </div>
+    </div>
+  </div>
+</div>
+
+    <!----------------featured Books -------------------->
+    <div class="small-container">
+      <h2 class="title">Featured Titles</h2>
+      <div class="row">
+        <div class="col-4">
+          <a href="book-detail.html?book=Hide and Seek">
+            <img src="images/Hide-and-Seek.webp" alt="Book 4"
+          /></a>
+          <a href="book-detail.html"> <h4>Hide and Seek</h4></a>
+          <div class="rating">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-o"></i>
+          </div>
+          <a href="account.html" class="btn">Download PDF &#8595;</a>
+        </div>
+        <div class="col-4">
+          <a href="book-detail.html?book=Shantram">
+            <img src="images/Shantram.jpg" alt="Shantram"><h4>Shantram</h4>
+        </a>
+          <div class="rating">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-half-o"></i>
+            <i class="fa fa-star-o"></i>
+          </div>
+          <a href="account.html" class="btn">Download PDF &#8595;</a>
+        </div>
+        <div class="col-4">
+          <a href="book-detail.html?book=The Old Drift">
+          <img src="images/The Old Drift.webp" alt="The Old Drift" />
+          <h4>The Old Drift</h4>
+        </a>
+          <div class="rating">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-half-o"></i>
+          </div>
+          <a href="account.html" class="btn">Download PDF &#8595;</a>
+        </div>
+        <div class="col-4">
+          <a href="book-detail.html?book=Unni's Wish">
+            <img src="images/Unni Wish.webp" alt="Unni's Wish">
+        </a>
+          <h4>Unni's Wish</h4>
+          <div class="rating">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-o"></i>
+          </div>
+          <a href="account.html" class="btn">Download PDF &#8595;</a>
+        </div>
+      </div>
+      <h2 class="title">Bestsellers</h2>
+      <div class="row">
+        <div class="col-4">
+          <img src="images/Silent-Partners.jpg" alt="Book 8" />
+          <h4>Silent Partners</h4>
+          <div class="rating">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-o"></i>
+          </div>
+          <a href="account.html" class="btn">Download PDF &#8595;</a>
+        </div>
+        <div class="col-4">
+          <img src="images/black-beauty-obooko.jpg" alt="Book 9" />
+          <h4>Black Beauty</h4>
+          <div class="rating">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-half-o"></i>
+            <i class="fa fa-star-o"></i>
+          </div>
+          <a href="account.html" class="btn">Download PDF &#8595;</a>
+        </div>
+        <div class="col-4">
+          <img src="images/Beauty-and-the-Beast.jpg" alt="Book 10" />
+          <h4>Beauty and the Beast</h4>
+          <div class="rating">s
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-half-o"></i>
+          </div>
+          <a href="account.html" class="btn">Download PDF &#8595;</a>
+        </div>
+        <div class="col-4">
+          <img src="images/Do You Wonder How Snake Slither.webp" alt="Book 11" />
+          <h4>Do You Wonder How Snake Slither</h4>
+          <div class="rating">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-o"></i>
+          </div>
+          <a href="account.html" class="btn">Download PDF &#8595;</a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-4">
+          <img src="images/barefoot-cyberspace-becky-hogge.jpg" alt="Book 12" />
+          <h4>Barefoot Cyberspace</h4>
+          <div class="rating">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-o"></i>
+          </div>
+          <a href="account.html" class="btn">Download PDF &#8595;</a>
+        </div>
+        <div class="col-4">
+          <img src="images/The Man Who Could'nt Sleep.jpg" alt="Book 13" />
+          <h4>The Man Who Could'nt Sleep</h4>
+          <div class="rating">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-half-o"></i>
+            <i class="fa fa-star-o"></i>
+          </div>
+          <a href="account.html" class="btn">Download PDF &#8595;</a>
+        </div>
+        <div class="col-4">
+          <img src="images/Guilt of the Brass Thieves.jpg" alt="Book 14" />
+          <h4>Guilt of the Brass Thieves</h4>
+          <div class="rating">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-half-o"></i>
+          </div>
+          <a href="account.html" class="btn">Download PDF &#8595;</a>
+        </div>
+        <div class="col-4">
+          <img src="images/Captain Fantasy Story.webp" alt="Book 15" />
+          <h4>Captain Fantasy Story</h4>
+          <div class="rating">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-o"></i>
+          </div>
+          <a href="account.html" class="btn">Download PDF &#8595;</a>
+
+        </div>
+      </div>
+    </div>
+    <!------------------offer ------------>
+    <div class="offer">
+      <div class="small-container">
+        <div class="row">
+          <div class="col-2">
+            <img src="images/The Clever Tortoise.webp" class="offer-img" />
+          </div>
+          <div class="col-2">
+            <p>BOOK OF THE WEEK</p>
+            <br />
+            <h2>The Clever Tortoise</h2>
+            <br />
+            <small>
+              The tortoises want the wood apples but they don’t have hands to open them like the monkeys, will they find a solution? Find out in the cute, brightly illustrated story.
+            </small>
+            <a href="books/The Clever Tortoise.pdf" class="btn"> Free Download &#8595;</a>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ---------------------footer------------------- -->
+    <div class="footer">
+      <div class="container">
+       
+        <p class="copyright">Copyright 2024 - BOOKMART</p>
+      </div>
+    </div>
+    <!-- ---------Javascript for toggle menu------------- -->
+    <script>
+      var MenuItems = document.getElementById("MenuItems");
+      MenuItems.style.maxHeight = "0px";
+      function menutoggle() {
+        if (MenuItems.style.maxHeight == "0px") {
+          MenuItems.style.maxHeight = "200px";
+        } else {
+          MenuItems.style.maxHeight = "0px";
+        }
+      }
+    </script>
+  </body>
+</html>

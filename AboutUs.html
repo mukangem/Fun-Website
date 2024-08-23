@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us | BOOKMART</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <div class="header">
+      <div class="navbar">
+        <div>
+          <h1 class="logo">BOOKMART</h1>
+        </div>
+        <nav>
+          <ul id="MenuItems">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="account.html">Sign In</a></li>
+            
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <!-- About Us Section -->
+    <div class="small-container about-container">
+      <h2 class="title">About Us</h2>
+      <div class="row">
+        <div class="col-2">
+          <img src="images/header.png" alt="About BOOKMART" />
+        </div>
+        <div class="col-2">
+          <h3>Welcome to BOOKMART</h3>
+          <p>
+            BOOKMART is your go-to platform for accessing a wide range of ebooks
+            in various categories such as Fiction, Non-Fiction, Science, and
+            Biography. We are dedicated to providing readers with a seamless
+            experience for discovering and downloading high-quality books from
+            the comfort of their devices.
+          </p>
+          <p>
+            Our mission is to make knowledge and entertainment accessible to
+            everyone, regardless of their location. Whether you're looking for a
+            thrilling novel, an insightful biography, or educational resources,
+            BOOKMART has something for everyone.
+          </p>
+          <p>
+            We believe in fostering a love for reading by making books readily
+            available in digital format. Join us on this journey as we bring
+            together a diverse collection of ebooks that cater to readers of all
+            interests and ages.
+          </p>
+          <p>
+            Explore our categories and immerse yourself in a world of stories,
+            knowledge, and inspiration.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <div class="container">
+        <p class="copyright">Copyright 2024 - BOOKMART</p>
+      </div>
+    </div>
+
+    <!-- Javascript for toggle menu -->
+    <script>
+      var MenuItems = document.getElementById("MenuItems");
+      MenuItems.style.maxHeight = "0px";
+      function menutoggle() {
+        if (MenuItems.style.maxHeight == "0px") {
+          MenuItems.style.maxHeight = "200px";
+        } else {
+          MenuItems.style.maxHeight = "0px";
+        }
+      }
+    </script>
+  </body>
+</html>

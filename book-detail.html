@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookmart | Book Details</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+      .book-detail-container {
+        display: flex;
+        margin: 50px;
+      }
+
+      .book-detail-image {
+        flex: 1;
+        margin-right: 20px;
+      }
+
+      .book-detail-image img {
+        width: 100%;
+        max-width: 400px;
+        border-radius: 8px;
+      }
+
+      .book-detail-info {
+        flex: 2;
+      }
+
+      .book-detail-info h2 {
+        font-size: 28px;
+        margin-bottom: 20px;
+      }
+
+      .book-detail-info p {
+        margin: 10px 0;
+      }
+
+      .book-detail-info a {
+        display: inline-block;
+        padding: 10px 20px;
+        background: #ff523b;
+        color: #fff;
+        border-radius: 5px;
+        text-decoration: none;
+        margin-top: 20px;
+      }
+
+      .book-detail-info a:hover {
+        background: #ff301b;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Header and Navbar -->
+    <div class="container">
+      <div class="navbar">
+        <div>
+          <h1 class="logo">BOOKMART</h1>
+        </div>
+        <nav>
+          <ul id="MenuItems">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="logout.php">Sign Out</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Book Details Section -->
+    <div class="book-detail-container">
+      <div class="book-detail-image">
+        <img id="bookImage" src="images/Hide-and-Seek.webp" alt="Book Image" />
+      </div>
+      <div class="book-detail-info">
+        <h2 id="bookTitle">Hide and Seek</h2>
+        <p id="bookAuthor">by T. Albert</p>
+        <p id="bookDescription">
+          A simple game of hide-and-seek leads the children into the adventure of their lives.
+          An exciting story that will have little readers turning the pages, eager to know what comes next.
+        </p>
+        <a id="downloadLink" href="books/001-HIDE-AND-SEEK-Free-Childrens-Book-By-Monkey-Pen.pdf">Download PDF</a>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <div class="container">
+        <p class="copyright">© 2024 - Bookmart</p>
+      </div>
+    </div>
+
+    <script src="auth.js"></script>
+    <!-- JavaScript for dynamic book details -->
+    <script>
+      // Define book details
+      const books = {
+        "Hide and Seek": {
+          title: "Hide and Seek",
+          author: "by T. Albert",
+          image: "images/Hide-and-Seek.webp",
+          description:
+            "An exciting story that will have little readers turning the pages, eager to know what comes next",
+          downloadLink: "books/001-HIDE-AND-SEEK-Free-Childrens-Book-By-Monkey-Pen.pdf",
+        },
+        "Shantram": {
+          title: "Shantram",
+          author: "by Gregory David",
+          image: "images/Shantram.jpg",
+          description:
+            "Shantaram by Gregory David Roberts is a gripping novel based on the author’s real-life experiences. The story follows Lin, an escaped Australian convict who finds himself in the vibrant and chaotic streets of 1980s Bombay (now Mumbai). Seeking refuge and a fresh start, Lin becomes deeply entangled in the city's underworld, where he navigates friendships, crime, love, and betrayal.",
+          downloadLink: "books/Shantram.pdf",
+        },
+        "The Old Drift": {
+          title: "The Old Drift",
+          author: "by Namwali Serpell",
+          image: "images/The Old Drift.webp",
+          description:
+            "The Old Drift by Namwali Serpell is an ambitious, multi-generational novel set in Zambia, blending historical fiction, magical realism, and speculative elements.",
+          downloadLink: "books/The Old Drift.pdf",
+        },
+        "Unni's Wish": {
+          title: "Unni's Wish",
+          author: "by Meryl Garcia",
+          image: "images/Unni Wish.webp",
+          description:
+            "Unni doesn’t understand why he can’t have cold lime juice, a fan to keep cool, or TV like his friend, then one day some men come to work in his village, what do you think will happen?.",
+          downloadLink: "books/Unni Wish.pdf",
+        },
+        "The Old Drift": {
+          title: "The Old Drift",
+          author: "by Namwali Serpell",
+          image: "images/The Old Drift.webp",
+          description:
+            "The Old Drift by is an ambitious, multi-generational novel set in Zambia, blending historical fiction, magical realism, and speculative elements. The story spans over a century and follows three families one African, one European, and one Indian whose lives intersect in unexpected ways.",
+          downloadLink: "books/The Old Drift.pdf",
+        },
+        "Guilt of the Brass Thieves": {
+          title: "Guilt of the Brass Thieves",
+          author: "by Franklin W. Dixon",
+          image: "images/Guilt of the Brass Thieves.jpg",
+          description:
+            "The Guilt of the Brass Thieves is a thrilling mystery novel from The Hardy Boys series. In this adventure, Frank and Joe Hardy are tasked with solving the case of missing brass items from several factories. The stolen goods lead the brothers into a deeper mystery involving a criminal gang operating in their town.",
+          downloadLink: "books/Guilt-of-the-Brass-Thieves.pdf",
+        },
+        "Beauty and the Beast": {
+          title: "Beauty and the Beast",
+          author: "by Franklin W. Dixon",
+          image: "images/Beauty-and-the-Beast.jpg",
+          description:
+            "Beauty and the Beast is a timeless fairy tale about love, sacrifice, and the transformative power of kindness. The story follows Belle, a bright and independent young woman who is taken prisoner by a fearsome Beast in his enchanted castle. Despite her initial fear, Belle befriends the castle’s magical inhabitants and gradually sees beyond the Beast’s frightening exterior.",
+          downloadLink: "books/Beauty-and-the-Beast.pdf",
+        },
+      };
+
+      // Get the book parameter from the URL
+      const urlParams = new URLSearchParams(window.location.search);
+      const bookParam = urlParams.get("book");
+
+      // If a valid book is selected, update the page content
+      if (bookParam && books[bookParam]) {
+        document.getElementById("bookTitle").innerText = books[bookParam].title;
+        document.getElementById("bookAuthor").innerText =
+          books[bookParam].author;
+        document.getElementById("bookDescription").innerText =
+          books[bookParam].description;
+        document.getElementById("bookImage").src = books[bookParam].image;
+        document
+          .getElementById("downloadLink")
+          .setAttribute("href", books[bookParam].downloadLink);
+      }
+    </script>
+  </body>
+</html>

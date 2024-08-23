@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us | BOOKMART</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        margin: 0;
+        padding: 0;
+        background: pink;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 10px;
+      }
+
+      .navbar h1.logo {
+        font-size: 30px;
+        font-weight: 600;
+        color: #333;
+        margin-right: 420px;
+      }
+
+      .navbar nav ul {
+        list-style: none;
+        display: flex;
+        gap: 10px;
+      }
+
+      .navbar nav ul li {
+        margin-left: 40px;
+      }
+
+      .navbar nav ul li a {
+        text-decoration: none;
+        font-weight: 500;
+        color: #333;
+      }
+
+      .contact-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 70vh;
+        padding: 50px 20px;
+        background: #333;
+      }
+
+      .contact-box-wrapper {
+        display: flex;
+        align-items: center;
+        background: #222;
+        padding: 40px;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .contact-box-wrapper::before {
+        content: "";
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: linear-gradient(45deg, #ff4d4d, #ffb74d, #4db6ff, #4dffb6);
+        animation: glowing 10s linear infinite;
+        z-index: 1;
+        filter: blur(30px);
+      }
+
+      .contact-box-wrapper::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        z-index: 2;
+        border-radius: 10px;
+      }
+
+      @keyframes glowing {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      .contact-logo {
+        flex: 1;
+        padding-right: 20px;
+        text-align: center;
+        z-index: 3;
+      }
+
+      .contact-logo img {
+        max-width: 150px;
+        height: auto;
+        border-radius: 10px;
+      }
+
+      .contact-box {
+        flex: 2;
+        position: relative;
+        z-index: 3;
+      }
+
+      .contact-box h2 {
+        font-size: 28px;
+        margin-bottom: 20px;
+        color: #fff;
+      }
+
+      .contact-box .input-group {
+        margin-bottom: 20px;
+      }
+
+      .contact-box .input-group label {
+        color: #aaa;
+        font-size: 16px;
+        margin-bottom: 5px;
+        display: block;
+      }
+
+      .contact-box .input-group input,
+      .contact-box .input-group textarea {
+        width: 100%;
+        padding: 10px;
+        background: #333;
+        border: 1px solid #555;
+        border-radius: 5px;
+        color: #fff;
+        font-size: 16px;
+      }
+
+      .contact-box .input-group textarea {
+        height: 100px;
+        resize: none;
+      }
+
+      .contact-box .submit-btn {
+        padding: 10px 20px;
+        background: #ff4d4d;
+        border: none;
+        border-radius: 5px;
+        color: #fff;
+        font-size: 18px;
+        cursor: pointer;
+        transition: background 0.3s;
+      }
+
+      .contact-box .submit-btn:hover {
+        background: #ff6666;
+      }
+
+      /* Footer styling */
+      .footer {
+        background: #000;
+        color: #fff;
+        padding: 20px 0;
+        text-align: center;
+      }
+
+      .footer p {
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <div class="container">
+      <div class="navbar">
+        <div>
+          <h1 class="logo">BOOKMART</h1>
+        </div>
+        <nav>
+          <ul id="MenuItems">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="AboutUs.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="account.html">Sign In</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Contact Form Section -->
+    <div class="contact-container">
+      <div class="contact-box-wrapper">
+        <!-- Logo Section -->
+        <div class="contact-logo">
+          <img src="images/logo.jpg" alt="BOOKMART Logo" />
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-box">
+          <h2>Contact Us</h2>
+          <form action="submit_form.php" method="post">
+            <div class="input-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required />
+            </div>
+            <div class="input-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            <div class="input-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" required />
+            </div>
+            <div class="input-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <p>Copyright © 2024 BOOKMART</p>
+    </div>
+  </body>
+</html>
